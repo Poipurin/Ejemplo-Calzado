@@ -1,4 +1,5 @@
 package modelo;
 
-public class Mujer {
+public class Mujer extends Formal {
+    private int alturaTaco;
 }

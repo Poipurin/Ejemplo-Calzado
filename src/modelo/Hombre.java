@@ -1,4 +1,4 @@
 package modelo;
 
-public class Hombre {
+public class Hombre extends Formal{
 }
