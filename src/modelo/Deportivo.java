@@ -10,6 +10,13 @@ public class Deportivo extends Calzado{
         this.tipoMaterial = tipoMaterial;
     }
 
+    public Deportivo(Producto producto, int numero, String semana, String futbol, String cuero) {
+    }
+
+    public Deportivo() {
+
+    }
+
     public String getTipoDeporte() {
         return tipoDeporte;
     }
