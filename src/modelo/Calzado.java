@@ -38,4 +38,13 @@ public class Calzado {
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
+
+    public int valorVenta(){
+
+        return 0;
+    }
+    public int impuestoIVA(){
+        return 0;
+    }
+
 }

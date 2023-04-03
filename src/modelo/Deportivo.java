@@ -32,4 +32,8 @@ public class Deportivo extends Calzado{
     public void setTipoMaterial(String tipoMaterial) {
         this.tipoMaterial = tipoMaterial;
     }
+
+    public int impuestoMaterial(){
+        return 0;
+    }
 }

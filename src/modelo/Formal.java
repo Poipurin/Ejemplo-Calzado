@@ -8,11 +8,18 @@ public class Formal extends Calzado {
         this.color = color;
     }
 
+    public Formal() {
+    }
+
     public String getColor() {
         return color;
     }
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int impuestoEspecifico(){
+        return 0;
     }
 }

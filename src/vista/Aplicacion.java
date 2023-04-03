@@ -1,22 +1,16 @@
 package vista;
-import modelo.Calzado;
-import modelo.Producto;
+import modelo.*;
 
 public class Aplicacion {
     public static void main(String[] args) {
-        //Instanciar un objeto de tipo producto
-        //Constructor
-        Producto producto = new Producto();
-        producto.stock = 100;
-        producto.codigo = "123ABC";
-        producto.valorBase = 10000;
+        Deportivo deportivo = new Deportivo (new Producto("123ABC",100,10000),44,"Semana","Futbol","Cuero");
 
-        Calzado calzado = new Calzado();
-
-        calzado.producto = producto;
-
-        System.out.println("Codigo producto: "+ calzado.producto.codigo);
-        System.out.println("Stock producto: "+ calzado.producto.stock);
+        Deportivo deportivo2 = new Deportivo();
 
     }
+
+    Hombre hombre = new Hombre();
+
+    Mujer mujer = new Mujer();
+
 }
