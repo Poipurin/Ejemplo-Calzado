@@ -40,7 +40,13 @@ public class Calzado {
     }
 
     public int valorVenta(){
-
+        int valorVenta = 0;
+        if(this .diaVenta.equalsIgnoreCase("Semana")){
+             //-15% valor base
+            valorVenta = this.getProducto().getValorBase() - Math.round(this.getProducto().getValorBase()*15/100);
+        }else if(this.diaVenta.equalsIgnoreCase("Fin de Semana"))
+            //+24% valor base
+            valorVenta = (int) (this.getProducto().getValorBase() + Math.round(this.getProducto().getValorBase()*0.24));
         return 0;
     }
     public int impuestoIVA(){
