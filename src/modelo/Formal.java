@@ -1,4 +1,5 @@
 package modelo;
 
-public class Formal {
+public class Formal extends Calzado {
+    private String color;
 }
