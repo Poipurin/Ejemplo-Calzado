@@ -8,6 +8,10 @@ public class Mujer extends Formal {
         this.alturaTaco = alturaTaco;
     }
 
+    public Mujer() {
+
+    }
+
     public int getAlturaTaco() {
         return alturaTaco;
     }
