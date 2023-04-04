@@ -9,6 +9,7 @@ public class Formal extends Calzado {
     }
 
     public Formal() {
+
     }
 
     public String getColor() {

@@ -1,19 +1,17 @@
 package modelo;
 
 public class Producto {
-
-    public String codigo;
-    public int stock;
-    public int valorBase;
-
-
-    public Producto() {
-    }
+    private String codigo;
+    private int stock;
+    private int valorBase;
 
     public Producto(String codigo, int stock, int valorBase) {
         this.codigo = codigo;
         this.stock = stock;
         this.valorBase = valorBase;
+    }
+
+    public Producto() {
     }
 
     public String getCodigo() {

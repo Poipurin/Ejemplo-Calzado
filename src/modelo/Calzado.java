@@ -6,13 +6,14 @@ public class Calzado {
 
     private Producto producto;
 
-    public Calzado() {
-    }
-
     public Calzado(String diaVenta, int numero, Producto producto) {
+        super();
         this.diaVenta = diaVenta;
         this.numero = numero;
         this.producto = producto;
+    }
+
+    public Calzado() {
     }
 
     public String getDiaVenta() {
@@ -38,19 +39,17 @@ public class Calzado {
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
-
     public int valorVenta(){
         int valorVenta = 0;
-        if(this .diaVenta.equalsIgnoreCase("Semana")){
-             //-15% valor base
+        if(this.getDiaVenta().equalsIgnoreCase("semana")){
             valorVenta = this.getProducto().getValorBase() - Math.round(this.getProducto().getValorBase()*15/100);
-        }else if(this.diaVenta.equalsIgnoreCase("Fin de Semana"))
-            //+24% valor base
+        }else if(this.getDiaVenta().equalsIgnoreCase("Fin de semana")){
             valorVenta = (int) (this.getProducto().getValorBase() + Math.round(this.getProducto().getValorBase()*0.24));
-        return 0;
+        }
+        return valorVenta;
     }
     public int impuestoIVA(){
-        return 0;
+        return Math.round(this.valorVenta()*19/100);
     }
 
 }
