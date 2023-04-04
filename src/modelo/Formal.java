@@ -21,6 +21,9 @@ public class Formal extends Calzado {
     }
 
     public int impuestoEspecifico(){
-        return 0;
+        return (int) Math.round(this.getProducto().getValorBase()*7.4/100);
+    }
+    public int descuento(){
+
     }
 }
