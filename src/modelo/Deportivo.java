@@ -30,6 +30,7 @@ public class Deportivo extends Calzado{
         this.tipoMaterial = tipoMaterial;
     }
     public int impuestoMaterial(){
-        return 0;
+        int impuestoMaterial = (this.getTipoMaterial().equalsIgnoreCase("Cuero") ? Math.round(this.getProducto().getValorBase()*15/100) : (int) Math.round(this.getProducto().getValorBase()*0.06));
+        return impuestoMaterial;
     }
 }
