@@ -14,6 +14,11 @@ public class Deportivo extends Calzado{
 
     }
 
+    @Override
+    public int valorAPagar() {
+        return 0;
+    }
+
     public String getTipoDeporte() {
         return tipoDeporte;
     }

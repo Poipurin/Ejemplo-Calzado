@@ -1,6 +1,6 @@
 package modelo;
 
-public class Calzado {
+public abstract class Calzado {
     private String diaVenta;
     private int numero;
 
@@ -51,5 +51,7 @@ public class Calzado {
     public int impuestoIVA(){
         return Math.round(this.valorVenta()*19/100);
     }
+
+    public abstract int valorAPagar();
 
 }

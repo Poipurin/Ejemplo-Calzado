@@ -13,6 +13,11 @@ public class Mujer extends Formal {
     }
 
     @Override
+    public int valorAPagar() {
+        return 0;
+    }
+
+    @Override
     public int descuento() {
         return 0;
     }
