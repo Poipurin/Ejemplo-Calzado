@@ -16,7 +16,15 @@ public class Deportivo extends Calzado{
 
     @Override
     public int valorAPagar() {
-        return 0;
+        int valorAPagar;
+        if(this.getProducto().getStock()>0){
+            valorAPagar = valorVenta() + impuestoMaterial() + impuestoIVA();
+            this.getProducto().setStock(this.getProducto().getStock() -1);
+        }else{
+            System.out.println("Calzado sin stock :c");
+            valorAPagar = -1;
+        }
+        return valorAPagar;
     }
 
     public String getTipoDeporte() {
