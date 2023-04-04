@@ -30,7 +30,19 @@ public class Deportivo extends Calzado{
         this.tipoMaterial = tipoMaterial;
     }
     public int impuestoMaterial(){
-        int impuestoMaterial = (this.getTipoMaterial().equalsIgnoreCase("Cuero") ? Math.round(this.getProducto().getValorBase()*15/100) : (int) Math.round(this.getProducto().getValorBase()*0.06));
+       /* int impuestoMaterial = (this.getTipoMaterial().equalsIgnoreCase("Cuero") ? Math.round(this.getProducto().getValorBase()*15/100) : (int) Math.round(this.getProducto().getValorBase()*0.06));
+        return impuestoMaterial;*/
+        int impuestoMaterial= -1;
+        switch (this.getTipoMaterial().toLowerCase()){
+            case "cuero":
+                impuestoMaterial = Math.round(this.getProducto().getValorBase()*15/100);
+                break;
+            case "lona":
+                impuestoMaterial = Math.round(this.getProducto().getValorBase()*6/100);
+                break;
+            default:
+                break;
+        }
         return impuestoMaterial;
     }
 }
