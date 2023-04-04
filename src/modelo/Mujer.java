@@ -12,6 +12,11 @@ public class Mujer extends Formal {
 
     }
 
+    @Override
+    public int descuento() {
+        return 0;
+    }
+
     public int getAlturaTaco() {
         return alturaTaco;
     }
