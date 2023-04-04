@@ -19,7 +19,11 @@ public class Mujer extends Formal {
 
     @Override
     public int descuento() {
-        return 0;
+        int descuento = 0;
+        if(this.getAlturaTaco() > 10){
+            descuento = this.valorVenta() * 20 /100;
+        }
+        return descuento();
     }
 
     public int getAlturaTaco() {

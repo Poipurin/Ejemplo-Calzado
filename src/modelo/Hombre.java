@@ -16,6 +16,10 @@ public class Hombre extends Formal {
 
     @Override
     public int descuento() {
-        return 0;
+        int descuento = 0;
+        if(this.getColor().equalsIgnoreCase("Rojo") || this.getColor().equalsIgnoreCase("Verde")){
+            descuento = this.valorVenta() * 25 /100;
+        }
+        return descuento();
     }
 }
