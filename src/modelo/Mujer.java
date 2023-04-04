@@ -3,14 +3,15 @@ package modelo;
 public class Mujer extends Formal {
     private int alturaTaco;
 
-    public Mujer(String diaVenta, int numero, Producto producto, String color, int alturaTaco) {
+    public Mujer(Producto producto, String diaVenta, int numero, String color, int alturaTaco) {
         super(diaVenta, numero, producto, color);
         this.alturaTaco = alturaTaco;
     }
 
-    public Mujer() {
-
+    public Mujer(){
+        super();
     }
+
     @Override
     public int valorAPagar() {
         int valorAPagar;
@@ -29,8 +30,9 @@ public class Mujer extends Formal {
         int descuento = 0;
         if(this.getAlturaTaco() > 10){
             descuento = this.valorVenta() * 20 /100;
+            return descuento;
         }
-        return descuento();
+        return descuento;
     }
 
     public int getAlturaTaco() {
