@@ -4,7 +4,32 @@ import java.util.Scanner;
 
 public class Aplicacion {
     public static void main(String[] args) {
-        System.out.println(menu());
+        int opcion;
+       do{
+           opcion = menu();
+           switch (opcion){
+               case 1:
+                   System.out.println("Ingreso calzados");
+                   break;
+               case 2:
+                   System.out.println("Calzados de mujer");
+                   break;
+               case 3:
+                   System.out.println("Valor venta");
+                   break;
+               case 4:
+                   System.out.println("Calzados top");
+                   break;
+               case 5:
+                   System.out.println("Total impuesto específico");
+                   break;
+               case 6:
+                   System.out.println("Total descuento");
+                   break;
+           }
+       }
+       while(opcion !=7);
+
     }
 
     public static int menu(){
@@ -18,5 +43,9 @@ public class Aplicacion {
         System.out.println("7.- Salir");
         System.out.println("Ingrese opción para continuar");
         return Leer.datoInt();
+    }
+
+    public static String pedirCodigo(){
+
     }
 }
