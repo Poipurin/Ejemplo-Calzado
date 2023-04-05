@@ -1,6 +1,9 @@
 package controlador;
 
 import modelo.Calzado;
+import modelo.Deportivo;
+import modelo.Hombre;
+import modelo.Mujer;
 
 import java.util.ArrayList;
 
@@ -20,5 +23,26 @@ public class TiendaCalzado {
 
     public void setTienda(ArrayList<Calzado> tienda) {
         this.tienda = tienda;
+    }
+
+    public int buscarCalzado(String codigoCalzado){
+        for(int i=0; i <  tienda.size(); i++){
+            if(tienda.get(i).getProducto().getCodigo().compareToIgnoreCase(codigoCalzado)==0){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public void ingresarCalzadoMujer(Mujer mujer){
+        if(buscarCalzado(mujer.getProducto().getCodigo())==-1){
+            tienda.add(mujer);
+        }
+
+    }
+    public void ingresarCalzadoHombre(Hombre hombre){
+
+    }
+    public void ingresarCalzadoDeportivo(Deportivo deportivo){
+
     }
 }

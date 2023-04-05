@@ -1,9 +1,14 @@
 package vista;
 
+import controlador.TiendaCalzado;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Aplicacion {
     public static void main(String[] args) {
+        TiendaCalzado tienda = new TiendaCalzado(new ArrayList<>());
+
         int opcion;
        do{
            opcion = menu();
@@ -44,6 +49,9 @@ public class Aplicacion {
         System.out.println("Ingrese opción para continuar");
         return Leer.datoInt();
     }
-
+    public static String pedirCodigo(){
+        System.out.println("Favor ingrese codigo del calzado (Ej: 123ABC)");
+        return Leer.dato();
+    }
 
 }
