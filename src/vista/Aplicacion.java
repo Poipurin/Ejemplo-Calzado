@@ -45,7 +45,5 @@ public class Aplicacion {
         return Leer.datoInt();
     }
 
-    public static String pedirCodigo(){
 
-    }
 }
