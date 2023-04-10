@@ -85,7 +85,7 @@ public class TiendaCalzado {
                 suma = suma + tienda.get(i).getProducto().getStock();
             }
         }
-        mensaje = "Tienes "+ suma + "calzados TOP";
+        mensaje = "Tienes "+ suma + " calzados TOP";
         return mensaje;
     }
 }

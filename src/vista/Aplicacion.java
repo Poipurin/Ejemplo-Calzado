@@ -42,7 +42,10 @@ public class Aplicacion {
                        System.out.println(tienda.valorVenta(codigoSolicitado));}
                    break;
                case 4:
-                   System.out.println("Calzados top");
+                   if(tienda.getTienda().size()==0){
+                       System.out.println("No hay calzados en stock");
+                   }else{
+                   System.out.println(tienda.calzadosTOP());}
                    break;
                case 5:
                    System.out.println("Total impuesto específico");
