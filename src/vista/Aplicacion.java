@@ -17,7 +17,11 @@ public class Aplicacion {
                    System.out.println("Ingreso calzados");
                    break;
                case 2:
-                   System.out.println("Calzados de mujer");
+                   if(tienda.getTienda().size()==0){
+                       System.out.println("No hay calzados en stock");
+                   }else{
+                       System.out.println(tienda.calzadosMujer());
+                   }
                    break;
                case 3:
                    System.out.println("Valor venta");
