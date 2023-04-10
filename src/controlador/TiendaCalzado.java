@@ -48,11 +48,16 @@ public class TiendaCalzado {
     public String calzadosMujer(){
         String mensaje = "";
         Mujer mujer = null;
+        int contador = 0;
         for(int i=0; i < tienda.size();i++){
             if(tienda.get(i) instanceof Mujer){
                 mujer = (Mujer) tienda.get(i);
                 mensaje = mensaje + " dia de venta: "+mujer.getDiaVenta() + ", altura de taco: "+ mujer.getAlturaTaco() +" y descuento: $"+mujer.descuento();
+                contador++;
             }
+        }
+        if(contador == 0){
+            System.out.println("No hay calzados de mujer");
         }
         return mensaje;
 
