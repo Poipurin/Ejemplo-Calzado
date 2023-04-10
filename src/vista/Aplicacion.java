@@ -1,6 +1,10 @@
 package vista;
 
 import controlador.TiendaCalzado;
+import modelo.Deportivo;
+import modelo.Hombre;
+import modelo.Mujer;
+import modelo.Producto;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,6 +12,12 @@ import java.util.Scanner;
 public class Aplicacion {
     public static void main(String[] args) {
         TiendaCalzado tienda = new TiendaCalzado(new ArrayList<>());
+        Deportivo deportivo = new Deportivo(new Producto("123ABC",100,10000),44,"Fin de semana","Futbol","Cuero");
+        Hombre hombre = new Hombre(new Producto("222AAA",10,200000), "Fin de semana",43,"VERDE");
+        Mujer mujer = new Mujer(new Producto("122AAA",10,200000), "Fin de semana",43,"Negro",12);
+        tienda.ingresarCalzadoDeportivo(deportivo);
+        tienda.ingresarCalzadoHombre(hombre);
+        tienda.ingresarCalzadoMujer(mujer);
 
         int opcion;
        do{
