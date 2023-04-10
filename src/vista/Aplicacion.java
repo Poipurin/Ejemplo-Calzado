@@ -48,7 +48,11 @@ public class Aplicacion {
                    System.out.println(tienda.calzadosTOP());}
                    break;
                case 5:
-                   System.out.println("Total impuesto específico");
+                   if(tienda.getTienda().size()==0){
+                       System.out.println("No hay calzados en stock");
+                   }else{
+                       System.out.println("Tienes un total de: $"+ tienda.totalImpuestoEspecifico()+ " en impuestos específicos si se vendieran todos los calzados");
+                   }
                    break;
                case 6:
                    System.out.println("Total descuento");

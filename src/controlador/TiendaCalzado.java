@@ -88,6 +88,21 @@ public class TiendaCalzado {
         mensaje = "Tienes "+ suma + " calzados TOP";
         return mensaje;
     }
+    public int totalImpuestoEspecifico(){
+        int total = 0;
+        Mujer mujer = null;
+        Hombre hombre = null;
+        for(int i = 0; i< tienda.size(); i++){
+            if(tienda.get(i) instanceof Mujer){
+                mujer = (Mujer) tienda.get(i);
+                total = total + (mujer.impuestoEspecifico()*mujer.getProducto().getStock());
+            }else if(tienda.get(i) instanceof Hombre){
+                hombre = (Hombre) tienda.get(i);
+                total = total + (hombre.impuestoEspecifico()*hombre.getProducto().getStock());
+            }
+        }
+        return total;
+    }
 }
 
 
