@@ -67,7 +67,7 @@ public class TiendaCalzado {
         for(int i=0; i < tienda.size();i++){
             if (buscarCalzado(codigo) == 0) {
                 //lo encontré
-                return "El valos venta del calzado es: $"+ tienda.get(i).valorVenta() + "y el número del calzado es talla: " +tienda.get(i).getNumero();
+                return "El valor venta del calzado es: $"+ tienda.get(i).valorVenta() + " y el número del calzado es talla: " +tienda.get(i).getNumero();
             }
         }
         return "El código "+ codigo + " no está asociado a ningún calzado";

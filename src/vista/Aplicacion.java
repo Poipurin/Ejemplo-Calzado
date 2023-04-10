@@ -34,7 +34,12 @@ public class Aplicacion {
                    }
                    break;
                case 3:
-                   System.out.println("Valor venta");
+                   if(tienda.getTienda().size()==0){
+                       System.out.println("No hay calzados en stock");
+                   }else{
+                   String codigoSolicitado;
+                   codigoSolicitado = pedirCodigo();
+                       System.out.println(tienda.valorVenta(codigoSolicitado));}
                    break;
                case 4:
                    System.out.println("Calzados top");
