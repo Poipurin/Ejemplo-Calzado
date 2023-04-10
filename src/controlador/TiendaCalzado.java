@@ -103,6 +103,23 @@ public class TiendaCalzado {
         }
         return total;
     }
+
+    public int totalDescuentos() {
+        int total = 0;
+        Mujer mujer = null;
+        Hombre hombre = null;
+        for (int i = 0; i < tienda.size(); i++) {
+            if (tienda.get(i) instanceof Mujer) {
+                mujer = (Mujer) tienda.get(i);
+                total = total + (mujer.descuento() * mujer.getProducto().getStock());
+            } else if (tienda.get(i) instanceof Hombre) {
+                hombre = (Hombre) tienda.get(i);
+                total = total + (hombre.descuento() * hombre.getProducto().getStock());
+            }
+
+        }
+        return total;
+    }
 }
 
 

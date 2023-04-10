@@ -55,7 +55,11 @@ public class Aplicacion {
                    }
                    break;
                case 6:
-                   System.out.println("Total descuento");
+                   if(tienda.getTienda().size()==0){
+                       System.out.println("No hay calzados en stock");
+                   }else{
+                       System.out.println("Tienes un total de: $"+ tienda.totalDescuentos()+ " en descuentos si se vendieran todos los calzados");
+                   }
                    break;
            }
        }
