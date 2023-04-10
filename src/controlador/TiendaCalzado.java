@@ -40,10 +40,14 @@ public class TiendaCalzado {
 
     }
     public void ingresarCalzadoHombre(Hombre hombre){
-
+        if(buscarCalzado(hombre.getProducto().getCodigo())==-1){
+            tienda.add(hombre);
+        }
     }
-    public void ingresarCalzadoDeportivo(Deportivo deportivo){
-
+    public void ingresarCalzadoDeportivo(Deportivo deportivo) {
+        if(buscarCalzado(deportivo.getProducto().getCodigo())==-1){
+            tienda.add(deportivo);
+        }
     }
     public String calzadosMujer(){
         String mensaje = "";
@@ -65,11 +69,25 @@ public class TiendaCalzado {
     public String valorVenta(String codigo){
         String mensaje = "";
         for(int i=0; i < tienda.size();i++){
-            if (buscarCalzado(codigo) == 0) {
+            if (tienda.get(i).getProducto().getCodigo().compareToIgnoreCase(codigo)==0) {
                 //lo encontré
                 return "El valor venta del calzado es: $"+ tienda.get(i).valorVenta() + " y el número del calzado es talla: " +tienda.get(i).getNumero();
             }
         }
         return "El código "+ codigo + " no está asociado a ningún calzado";
     }
+
+    public String calzadosTOP(){
+        String mensaje = "";
+        int suma = 0;
+        for(int i = 0; i< tienda.size(); i++){
+            if(tienda.get(i).valorVenta() > 80000){
+                suma = suma + tienda.get(i).getProducto().getStock();
+            }
+        }
+        mensaje = "Tienes "+ suma + "calzados TOP";
+        return mensaje;
+    }
 }
+
+
